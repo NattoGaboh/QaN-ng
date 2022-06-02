@@ -16,6 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChangepasswordComponent } from './components/dashboard/changepassword/changepassword.component';
 import { QuestionnairesComponent } from './components/dashboard/questionnaires/questionnaires.component';
 import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NavbarComponent } from './components/dashboard/navbar/navbar.component'
     DashboardComponent,
     ChangepasswordComponent,
     QuestionnairesComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
