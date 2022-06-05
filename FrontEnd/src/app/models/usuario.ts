@@ -1,4 +1,4 @@
 export class Usuario{
-    nombreUsuario: string | undefined;
-    password: string | undefined;
+    NameUser: string | undefined;
+    Password: string | undefined;
 }
