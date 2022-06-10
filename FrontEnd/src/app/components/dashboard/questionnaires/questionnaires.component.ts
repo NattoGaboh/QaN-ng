@@ -15,6 +15,7 @@ export class QuestionnairesComponent implements OnInit {
   }
 
   getNombreUsuario():void{
-    this.NameUser = this.loginService.getNameUser();
+    console.log(this.loginService.getTokenDecoded());
+    this.NameUser = this.loginService.getTokenDecoded().sub;
   }
 }
