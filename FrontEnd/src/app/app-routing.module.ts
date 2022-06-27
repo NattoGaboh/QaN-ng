@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChangepasswordComponent } from './components/dashboard/changepassword/changepassword.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { StepOneComponent } from './components/dashboard/questionnaires/new-questionnaire/step-one/step-one.component';
+import { StepTwoComponent } from './components/dashboard/questionnaires/new-questionnaire/step-two/step-two.component';
+import { NewQuestionComponent } from './components/dashboard/questionnaires/new-questionnaire/stepTwo/new-question/new-question.component';
 import { QuestionnairesComponent } from './components/dashboard/questionnaires/questionnaires.component';
 import { BienvenidaComponent } from './components/inicio/bienvenida/bienvenida.component';
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -17,7 +20,11 @@ const routes: Routes = [
   ]},
   {path:'dashboard', component: DashboardComponent, children:[
     {path: '', component: QuestionnairesComponent},
-    {path: 'changepassword', component: ChangepasswordComponent}
+    {path: 'changepassword', component: ChangepasswordComponent},
+    {path: 'newQuestionnaire', component: NewQuestionComponent, children:[
+      {path: 'stepOne', component: StepOneComponent},
+      {path: 'stepTwo', component: StepTwoComponent}
+    ]}
   ]},
   {path: '**', redirectTo:'/inicio', pathMatch:'full'}
 ];
