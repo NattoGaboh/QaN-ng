@@ -24,6 +24,8 @@ export class StepOneComponent implements OnInit {
   }
 
   stepOne(): void{
+    this.questionnaireService.titleQuestionnaire = this.datosCuestionario.value.titulo;
+    this.questionnaireService.descriptionQuestionnaire = this.datosCuestionario.value.descripcion;
     this.router.navigate(['/dashboard/newQuestionnaire/stepTwo']);
   }
 
