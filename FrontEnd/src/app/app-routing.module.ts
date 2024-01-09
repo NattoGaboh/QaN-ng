@@ -5,6 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { StepOneComponent } from './components/dashboard/questionnaires/new-questionnaire/step-one/step-one.component';
 import { StepTwoComponent } from './components/dashboard/questionnaires/new-questionnaire/step-two/step-two.component';
 import { NewQuestionComponent } from './components/dashboard/questionnaires/new-questionnaire/stepTwo/new-question/new-question.component';
+import  {NewQuestionnaireComponent} from './components/dashboard/questionnaires/new-questionnaire/new-questionnaire.component';
 import { QuestionnairesComponent } from './components/dashboard/questionnaires/questionnaires.component';
 import { BienvenidaComponent } from './components/inicio/bienvenida/bienvenida.component';
 import { InicioComponent } from './components/inicio/inicio.component';
@@ -21,7 +22,7 @@ const routes: Routes = [
   {path:'dashboard', component: DashboardComponent, children:[
     {path: '', component: QuestionnairesComponent},
     {path: 'changepassword', component: ChangepasswordComponent},
-    {path: 'newQuestionnaire', component: NewQuestionComponent, children:[
+    {path: 'newQuestionnaire', component: NewQuestionnaireComponent, children:[
       {path: 'stepOne', component: StepOneComponent},
       {path: 'stepTwo', component: StepTwoComponent}
     ]}
