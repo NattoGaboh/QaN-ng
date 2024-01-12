@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Question } from 'src/app/models/question';
 import { QuestionnaireService } from 'src/app/services/questionnaire.service';
 
 @Component({
@@ -9,8 +12,11 @@ import { QuestionnaireService } from 'src/app/services/questionnaire.service';
 export class StepTwoComponent implements OnInit {
   titleQuestionnaire : string | undefined;
   descriptionQuestionnaire: string | undefined;
+  listQuestions: Question[]=[]
 
-  constructor(private questionnaireService: QuestionnaireService) { }
+  constructor(private questionnaireService: QuestionnaireService,
+              private toastr: ToastrService, 
+              private router: Router) { }
 
   ngOnInit(): void {
     this.titleQuestionnaire = this.questionnaireService.titleQuestionnaire;

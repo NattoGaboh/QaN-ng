@@ -4,7 +4,7 @@ import { ChangepasswordComponent } from './components/dashboard/changepassword/c
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { StepOneComponent } from './components/dashboard/questionnaires/new-questionnaire/step-one/step-one.component';
 import { StepTwoComponent } from './components/dashboard/questionnaires/new-questionnaire/step-two/step-two.component';
-import { NewQuestionComponent } from './components/dashboard/questionnaires/new-questionnaire/stepTwo/new-question/new-question.component';
+import { NewQuestionComponent } from './components/dashboard/questionnaires/new-questionnaire/step-two/new-question/new-question.component';
 import  {NewQuestionnaireComponent} from './components/dashboard/questionnaires/new-questionnaire/new-questionnaire.component';
 import { QuestionnairesComponent } from './components/dashboard/questionnaires/questionnaires.component';
 import { BienvenidaComponent } from './components/inicio/bienvenida/bienvenida.component';

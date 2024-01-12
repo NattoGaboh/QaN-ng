@@ -22,7 +22,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
 import { NewQuestionnaireComponent } from './components/dashboard/questionnaires/new-questionnaire/new-questionnaire.component';
 import { StepOneComponent } from './components/dashboard/questionnaires/new-questionnaire/step-one/step-one.component';
 import { StepTwoComponent } from './components/dashboard/questionnaires/new-questionnaire/step-two/step-two.component';
-import { NewQuestionComponent } from './components/dashboard/questionnaires/new-questionnaire/stepTwo/new-question/new-question.component';
+import { NewQuestionComponent } from './components/dashboard/questionnaires/new-questionnaire/step-two/new-question/new-question.component'
 
 @NgModule({
   declarations: [
