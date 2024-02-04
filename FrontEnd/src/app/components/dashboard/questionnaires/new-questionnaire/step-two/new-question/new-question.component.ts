@@ -11,7 +11,7 @@ import { Question } from 'src/app/models/question';
 export class NewQuestionComponent implements OnInit {
   newQuestion: FormGroup;
   question: Question | undefined;
-  awrCorrect: 0 | undefined;
+  awrCorrect: number | undefined;
   constructor(private fb:FormBuilder,
     private toastr:ToastrService) {
       this.newQuestion = this.fb.group({
@@ -21,6 +21,7 @@ export class NewQuestionComponent implements OnInit {
      }
 
   ngOnInit(): void {
+    this.addAnswerByDefault();
   }
 
   get getRespuestas():FormArray{
@@ -32,5 +33,22 @@ export class NewQuestionComponent implements OnInit {
       description:['',Validators.required],
       isCorrect:0
     }));
+  }
+
+  addAnswerByDefault():void{
+    this.addAnswer();
+    this.addAnswer();
+  }
+
+  deleteAnswer(index: number):void{
+    if(this.getRespuestas.length === 2){
+      this.toastr.error("La pregunta debe tener mínimo 2 respuestas.", "Error!");
+    }else{
+      this.getRespuestas.removeAt(index);
+    }
+  }
+
+  setValidAnswer(index:number):void{
+    this.awrCorrect=index;
   }
 }
